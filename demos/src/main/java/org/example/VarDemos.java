@@ -8,8 +8,8 @@ public class VarDemos {
 
         var v = new VarDemos();
 
-        System.out.println(z.getClass().getTypeName());
-        System.out.println(i instanceof Integer);
-        System.out.println(v.getClass().getTypeName());
+        System.out.println(z.getClass().getTypeName()); //java.lang.String
+        System.out.println(i instanceof Integer); //true
+        System.out.println(v.getClass().getTypeName()); //org.example.VarDemos
     }
 }
