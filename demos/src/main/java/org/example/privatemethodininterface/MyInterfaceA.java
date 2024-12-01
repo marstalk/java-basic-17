@@ -17,4 +17,13 @@ public interface MyInterfaceA {
     default void log(String a, LocalDateTime localDateTime){
         System.out.println("log " + a + " at " + localDateTime.format(DateTimeFormatter.ISO_DATE_TIME));
     }
+
+    default void log(String a, String b){
+        String rtn = callLocalPrivateMethod(a, b);
+        System.out.println(rtn);
+    }
+
+    private String callLocalPrivateMethod(String a, String b){
+        return a + "-" + b;
+    }
 }
